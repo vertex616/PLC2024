@@ -1,5 +1,6 @@
+//Create list of ints from 1 to 5, Haskell equivalent [1..5]
 function arrFunc(){
-    const arr = Array.from({length: 5}, (_, index) => index + 1);
+    const arr = Array.from({length: 5}, (_, index) => index + 1); 
     return arr;    
 }
 
