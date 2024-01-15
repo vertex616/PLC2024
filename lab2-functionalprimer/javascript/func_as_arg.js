@@ -1,17 +1,20 @@
-function sumFunc(){
+function arrFunc(){
     const arr = Array.from({length: 5}, (_, index) => index + 1);
-    let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    return sum;
+    return arr;    
 }
 
 function applicatorFunc(inpFunc, s){
     if(s=='s'){
-        return inpFunc();
+        const arr = inpFunc();        
+        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return sum;
     }
-    else{
-        return inpFunc()/5;
+    else{        
+        const arr = inpFunc();
+        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        return sum/5;
     }
 }
 
-let x = applicatorFunc(sumFunc, 'a');
+let x = applicatorFunc(arrFunc, 'a');
 console.log(x);
