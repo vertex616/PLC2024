@@ -1,6 +1,9 @@
 //Create list of ints from 1 to 5, Haskell equivalent [1..5]
 function arrFunc(){
-    const arr = Array.from({length: 5}, (_, index) => index + 1); 
+    let arr = [];
+    for (let i = 1; i<=5; i++) {
+        arr.push(i);
+    }
     return arr;    
 }
 
@@ -17,5 +20,5 @@ function applicatorFunc(inpFunc, s){
     }
 }
 
-let x = applicatorFunc(arrFunc, 'a');
+let x = applicatorFunc(arrFunc, 's');
 console.log(x);
