@@ -1,14 +1,3 @@
--- The following function definition contains a syntax error:
--- (To enable the code, delete contents of lines 10 and 3 and line -- on line 24)
-{-
-sayHello :: IO ()
-sayHello =
-  do
-  let name = "Alice"
-   putStrLn "hello"
-  putStrLn name
--}
-
 ask :: String -> IO ()
 ask prompt =
   do
