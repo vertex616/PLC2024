@@ -7,7 +7,7 @@ const Error_enumobj = {
 	INT_OVERFLOW: "INT_OVERFLOW"
 }
 
-const Resut_enumobj = {
+const Result_enumobj = {
     A_BIT_DIFFERENT: "A_BIT_DIFFERENT", 
     INFINITY: "INFINITY", 
     ZERO: "ZERO", 
@@ -18,16 +18,16 @@ let err = Error_enumobj.FP_ROUNDING
 function error2Result(err){
     switch (err) {
 	case Error_enumobj.FP_ROUNDING:
-	 return Resut_enumobj.A_BIT_DIFFERENT;
+	 return Result_enumobj.A_BIT_DIFFERENT;
 	break;
 	case Error_enumobj.FP_OVERFLOW:
-	    return Resut_enumobj.INFINITY;
+	    return Result_enumobj.INFINITY;
 	break;
 	case Error_enumobj.FP_UNDERFLOW:
-	    return Resut_enumobj.ZERO;
+	    return Result_enumobj.ZERO;
 	break;
 	case Error_enumobj.INT_OVERFLOW:
-	    return Resut_enumobj.VERY_DIFFERENT;
+	    return Result_enumobj.VERY_DIFFERENT;
 	break;
 	default:
 		return 'Invalid Error value';
@@ -40,7 +40,7 @@ var validArg = false;
 while(!validArg){
     var input = prompt("Input: ");
     let result = error2Result(input);
-    if (Object.values(Resut_enumobj).includes(result)){
+    if (Object.values(Result_enumobj).includes(result)){
         validArg = true;
 		console.log(input + " results in " + error2Result(input));
     }
