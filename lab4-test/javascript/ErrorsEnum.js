@@ -14,7 +14,6 @@ const Result_enumobj = {
     VERY_DIFFERENT: "VERY_DIFFERENT"
 }
 
-let err = Error_enumobj.FP_ROUNDING
 function error2Result(err){
     switch (err) {
 	case Error_enumobj.FP_ROUNDING:
