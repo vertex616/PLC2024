@@ -43,8 +43,9 @@ instance (Show Item) where
 piece1 = Piece "Moonlight" "C. Arrau" (17*60+26)
 piece2 = Piece "Pathetique" "D. Barenboim" (16*60+49)
 advert1 = Advert (Product "Bounty" "Mars") 15
+advert2 = Advert (Product "Lux" "P&G") 14
 
-playlist1 = [piece1, advert1, piece2]
+playlist1 = [piece1, advert1, piece2, advert2]
 
 lengths1 = [ item_length_secs item | item <- playlist1 ]
 
@@ -54,9 +55,9 @@ playlist2 = [piece2, advert1]
 
 playlists = [playlist1, playlist2] -- a list of lists
 
-adsFromPlaylists = "todo" -- TASK 5.4(b)
+adsFromPlaylists = "todo" -- TASK 6.4(b)
 
-shortItemLenghts1 = "todo" -- TASK 5.4(a)
+shortItemLenghts1 = "todo" -- TASK 6.4(a)
 
 main =
     do
